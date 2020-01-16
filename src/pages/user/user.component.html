@@ -1,0 +1,39 @@
+<h2>Users</h2>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table  class="table table-bordered">
+                <thead>
+                    <tr>
+                      <th scope="col">id</th>
+                      <th scope="col">Fullname</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let user of userList">
+                        <th scope="row">{{user.Id}}</th>
+                        <td>{{user.FullName}}</td>
+                        <!-- <td style="color: red;">
+                            <a class="btn btn-warning" (click)="DeleteUser(user)">Delete User</a>
+                        </td> -->
+                       
+                    </tr>
+                    <tr>
+                        <td> <a  routerLink="/AddUserPage" routerLinkActive="active" class="btn btn-primary form"  >Add User</a></td>
+                    </tr>
+                  </tbody>  
+            </table>
+        </div>
+
+        <!-- <div class="col ">
+            <div class="form-group">
+                <input type="text" name="FullName" [(ngModel)]="userModel.FullName" class="form-control">            
+                <input class="btn btn-primary form" type="button" value="Add User"  (click)="AddUser(userModel)">
+            </div>
+           
+        </div> -->
+    </div>
+    
+</div>
+
